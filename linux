@@ -1,0 +1,231 @@
+level 0:(username)ssh bandit0@bandit.labs.overthewire.org -p 2220
+password:bandit0
+commands used: ls -alps : used to list the files in the directory
+cat readme: NH2SQwcBdpmTEzi3bvBHMM9H66vVXjl( to cat the contents of the readme file)
+lesson: i learnt how to list the conntents in a directory and also how to use the cat command to diplay the password to level 
+
+level 1: username ssh bandit1@bandit.labs.overthewire.org -p 2220
+password:  NH2SQwcBdpmTEzi3bvBHMM9H66vVXjl
+commands used: ls -alps: to list the files
+cat ./-: rRGizSaX8Mk1RTb1CNQoXTcYWU6lgzi(to display the contents of the file)
+lesson: i learnt how to find hidden files and also to display the password hidden in the file
+
+level 2: username ssh bandit2@bandit.labs.overthewire.org -p 2220
+password: rRGizSaX8Mk1RTb1CNQoXTcYWU6lgzi
+commands used: ls -alps:used to list the files
+cat spaces\ in\ this\ filename: aBZ0W5EmUfAf7kHTQeOwd8bauFJ2lAiG
+lesson: learnt to find locate the password in the spaces file
+
+level 3: username ssh bandit3@bandit.labs.overthewire.org -p 2220
+password:aBZ0W5EmUfAf7kHTQeOwd8bauFJ2lAiG
+command used: ls -alps: to list the files
+cd inhere/: to change the directory
+ls -al: to list all files
+cat .hidden: 2EW7BBsr6MMoJ2HjW067dm8EgX26xNe: to cat the contents of the file
+lesson: learnt how to change directories to locate hidden files
+
+level 4: username ssh bandit4@bandit.labs.overthewire.org -p 2220
+password:  2EW7BBsr6MMoJ2HjW067dm8EgX26xNe
+command used: ls -alps: to list the contents in a directory
+cd inhere/ : to change directories
+ls : to list the files
+find . -type f | xargs file: to find the human readable file
+man xargs: find more details on the type of file
+cat ./-file07: lrIWWI6bB37kxfiCQZqUdOIYfr6eEeqR: to  cat the file and also display the password
+lesson: learnt how to look for the only human readable file in the inhere directory
+
+level 5:  username ssh bandit5@bandit.labs.overthewire.org -p 2220
+password: lrIWWI6bB37kxfiCQZqUdOIYfr6eEeqR
+command used: ls -alps: to list the files 
+cd inhere/: to change directories
+find . -type f -size 1033c ! -executable: to locate readable files
+cat ./maybehere07/.file2 : P4L4vucdmLnm8I7Vl7jG1ApGSfjYKqJU: to cat and display the password
+lesson: learnt how byte is written in linux, how to locate a non-executable file
+
+level 6: username ssh bandit6@bandit.labs.overthewire.org -p 2220
+password: lrIWWI6bB37kxfiCQZqUdOIYfr6eEeqR
+command used: find / -type f -user bandit7 -group bandit6 -size 33c
+cat /var/lib/dpkg/info/bandit7.password: z7WtoNQU2XfjWA8u5rN4vzqu4v99S
+lesson: learnt how to specify ownership in terms of the user
+
+level 7: username ssh bandit6@bandit.labs.overthewire.org -p 2220
+password: z7WtoNQU2XfjWA8u5rN4vzqu4v99S
+command used: ls -alps: to list out the contents in the directory
+strings data.txt | grep "millionth": TESKZC0XvTetK0S9xNwm25STk5iWrBvP
+lesson: learnt how the string command works
+
+level 8: username ssh bandit8@bandit.labs.overthewire.org -p 2220
+password:TESKZC0XvTetK0S9xNwm25STk5iWrBvP
+command used:cat data.txt: to cat the contents of the file
+sort data.txt: to sort the data in order
+man uniq: to get information on the uniq command
+sort data.txt | uniq | -c: ENN632PlfYiZbn3PhVK3XOGSlNInNE00t
+lesson: learnt how to sort data and how the uniq command works
+
+level 9: username ssh bandit9@bandit.labs.overthewire.org -p 2220
+password:ENN632PlfYiZbn3PhVK3XOGSlNInNE00t
+command used: strings data.txt | grep "=": G7w8LIi6J3kTb8A7j9LgrywtEUlyyp6s
+lesson: learnt how the equal sign command works
+
+level 10: username ssh bandit10@bandit.labs.overthewire.org -p 2220
+password: G7w8LIi6J3kTb8A7j9LgrywtEUlyyp6s
+command used: base: to decode 
+man base64
+base64 -d data.txt: 6zPeziLdR2RKNdNYFNb6nVCkzphlXHBM: to decode the data
+lesson: learnt how to decrypt data
+
+level 11: username ssh bandit11@bandit.labs.overthewire.org -p 2220
+password:6zPeziLdR2RKNdNYFNb6nVCkzphlXHBM
+command used:cat data.txt: to cat the contents in the file
+JVNBBFSmZwKKOP0XbFXOoW8chDz5yVRv
+lesson: learnt how to decrypt 
+
+level 12: username ssh bandit12@bandit.labs.overthewire.org -p 2220
+password:JVNBBFSmZwKKOP0XbFXOoW8chDz5yVRv
+command used:cat data.txt: to cat the content in the file
+man xxd: to display informations on the xxd command
+mkdir /tmp/ore: to make directories
+cp data.txt /tmp/ore: to copy the contents in the directory
+cd /tmp/ore: to change directories
+ls: to list the files in the directory
+xxd -r data.txt > data: to put the file into another file
+ls: to list the files in the directory
+file data: to display the file type
+man gzip: to display more information on the command
+mv data file.gz: to move the files
+gzip -d file.gz: to decompress the data
+ls: to list the files in the directory
+file file: to display the file type
+mv file file.bz2: to move the files
+man bzip2: to display more information on the command
+bzip2 -d: to decompress the data
+ls: to list the files in the directory
+file file: to display the file type
+mv file file.gz: to move the files
+gzip -d file.gz: to decompress the data
+ls: to list the files in the directory
+file file: to display the file type
+mv file file.tar: to move the files
+tar xf file.tar: to extract file
+ls: to list the files in the directory
+file data5.bin: to display the file type
+rm file.tar: to remove a file
+rm data.txt: to remove a file
+ls: to list the files in the directory
+file data5.bin: to display the file type
+mv data.bin data.tar: to move the files
+tar xf data.tar: to extract file
+ls: to list the files in the directory
+file data6.bin: to display the file type
+mv data6.bin data.bz2: to move the files
+bzip2 -d data.bz2: to decompress the data
+ls: to list the files in the directory
+file data: to display the file type
+mv data data.tar: to move the files
+ls: to list the files in the directory
+tar xf data.tar: to extract file
+ls: to list the files in the directory
+file data8.bin: to display the file type
+mv data8.bin data.gz: to move the files
+gzip -d data.gz: to decompress the data
+ls: to list the files in the directory
+file data to: to display the file type
+cat data: wbWdlBxEir4CaE8LaPhauuOo6pwRmrDw: to cat the contents and display the password
+lesson: learnt how to extract,decompress,remove,move,rename,display files and data
+
+level 13:username ssh bandit13@bandit.labs.overthewire.org -p 2220 
+password:wbWdlBxEir4CaE8LaPhauuOo6pwRmrDw
+command used: cat sshkey.private: to specify the sshkey
+cat /etc/bandit_pass/bandit14: fGrHPx402xGC7U7rXKDaxiF0ENq: to display the password to the previous level
+nc localhost 30000: jN2kgmIXJ6fShzhT2avhotn4Zcka6tnt:to login as bandit14 on local host
+lesson: learnt how to display the password to the previoys level  
+level 14:username ssh bandit14@bandit.labs.overthewire.org -p 2220 
+password:fGrHPx402xGC7U7rXKDaxiF0ENq
+lesson: how to display the password to the next level
+
+level 15:username ssh bandit15@bandit.labs.overthewire.org -p 2220 
+password:jN2kgmIXJ6fShzhT2avhotn4Zcka6tnt
+command used:man nc | grep ssl: to display more information on the command
+man nc: to display more information on the command
+man ncat: to display more information on the command
+man ncat | grep ssl: to display more information on the command
+ncat --ssl localhost 30001:jN2kgmIXJ6fShzhT2avhotn4Zcka6tnt: to diplay the password
+JQttfApk4SeyHwDlI9SXGR50qclOAil1
+lesson: learnt how to use ssl encryption
+
+level 16:username ssh bandit16@bandit.labs.overthewire.org -p 2220 
+password:JQttfApk4SeyHwDlI9SXGR50qclOAil1
+command used:cat /etc/bandit_pass/bandit16:JQttfApk4SeyHwDlI9SXGR50qclOAil1: to display the password to the current level
+nmap localhost -p 31000-32000: to find out current active ports
+cd Desktop: to change directories
+vim key
+chmod 400 key: to change mode
+lesson: learnt how to change mode and find open ports
+
+level 17:username ssh bandit17@bandit.labs.overthewire.org -p 2220 
+password: was in a private key
+command used:man diff: to display more information on the diff command
+diff passwords.old passwords.new
+hga5tuuCLF6fFzUpnagiMN8ssu9LFrdg
+lesson: learnt how to compare files line by line
+
+level 18:username ssh -t bandit18@bandit.labs.overthewire.org -p 2220 /bin/sh 
+password:ls: to list the files
+cat readme: awhqfNnAbc1naukrpqDYcF95h7HoMTrc
+lesson: learnt how to look for a readme file
+
+level 19:username ssh bandit19@bandit.labs.overthewire.org -p 2220 
+password:  awhqfNnAbc1naukrpqDYcF95h7HoMTrc
+command used:ls: to list the files
+file bandit20-do: to specify the file type
+ls -l bandit20-do: to list the files
+./bandit20-do id:
+./bandit20-do id cat /etc/bandit_pass/bandit20:VxCazJaVykI6W36BU0mJTCMrR95XT
+lesson: learnt how to access the password
+
+level 20:username ssh bandit20@bandit.labs.overthewire.org -p 2220 
+password:VxCazJaVykI6W36BU0mJTCMrR95XT
+command used:ls: to list the files
+man nc: to display more informations on the command
+./suconnect
+./suconnect 9999:NvEJF7oVjkddltPSrdKEFOllh9V1IBcq
+lesson: learnt how to connect to the localhost from suconnect
+
+level 21:username ssh bandit21@bandit.labs.overthewire.org -p 2220 
+password:NvEJF7oVjkddltPSrdKEFOllh9V1IBcq
+command used:cat /etc/cron.d/: to cat the content and to see the command that is being executed
+vim /etc/cron.d/: to navigate in the directory
+cat /etc/cron.d/cron.d/cronjob_bandit22: examine the contents of the file
+cat /usr/bin/cronjob_bandit22.sh: to check the contents of the shell script
+cat /tmp/t706lds9S0RqQh9aMcz6ShpAoZKF7fgv: to access the password to the next level
+WdDozAdTM2zDiFEQ2mGlwngMfj4EZff
+lesson: learnt how to check the contents of a shell script
+
+level 22:username ssh bandit21@bandit.labs.overthewire.org -p 2220 
+password:WdDozAdTM2zDiFEQ2mGlwngMfj4EZff
+command used:cd /etc/cron.d: to change directories
+ls: to list the contents
+cat cronjob_bandit23: to  to cat the content and to see the command that is being executed
+cat /usr/bin/cronjob_bandit23.sh: to cat the content of the shell script
+echo I am user bandit23 | md5sum | cut -d ' ' -f 1: 
+8ca319486bfbbc3663ea0fbe81326349
+QYv0Y2aiA672PsMmh9puTQuhoz8SyR2G
+lesson: learnt how to to cat the content of the shell script
+level 23:username ssh bandit21@bandit.labs.overthewire.org -p 2220 
+password:QYv0Y2aiA672PsMmh9puTQuhoz8SyR2G
+command used:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
